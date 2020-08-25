@@ -20,6 +20,7 @@ addSbtPlugin("org.scalameta" % "sbt-mdoc" % "2.2.3")
 addSbtPlugin("com.lightbend.sbt" % "sbt-java-formatter" % "0.5.1")
 addSbtPlugin("com.github.cb372" % "sbt-explicit-dependencies" % "0.2.13")
 addSbtPlugin("com.thoughtworks.sbt-api-mappings" % "sbt-api-mappings" % "3.0.0")
+addSbtPlugin("com.lightbend" % "sbt-google-cloud-storage" % "0.0.10")
 
 libraryDependencies ++= Seq(
   "com.github.os72" % "protoc-jar" % "3.11.4",

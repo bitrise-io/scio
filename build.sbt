@@ -181,7 +181,8 @@ val commonSettings = Sonatype.sonatypeSettings ++ assemblySettings ++ Seq(
   ) ++ (2 to 10).map(x => s"com\\.spotify\\.scio\\.sql\\.Query${x}")).mkString(";"),
   coverageHighlighting := true,
   // Release settings
-  publishTo := sonatypePublishToBundle.value,
+//  publishTo := sonatypePublishToBundle.value,
+  publishTo in ThisBuild := Some(GCSPublisher.forBucket("bitrise-io-artifacts", AccessRights.InheritBucket)),
   releaseCrossBuild := true,
   releasePublishArtifactsAction := PgpKeys.publishSigned.value,
   releaseProcess := Seq[ReleaseStep](
